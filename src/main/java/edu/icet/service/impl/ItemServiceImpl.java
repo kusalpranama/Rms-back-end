@@ -21,7 +21,7 @@ public class ItemServiceImpl implements ItemService {
 
     private final ItemRepository repository;
     private final ModelMapper mapper;
-    final ObjectMapper objectMapper;
+
     @Override
     public void addItem(Item item) {
     repository.save(mapper.map(item,ItemEntity.class));
@@ -49,16 +49,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
 
-   /* @Override
-    public List<Item> getByName(String itemName) {
-        List<Item> itemtList = new ArrayList<>();
 
-        repository.findByName(itemName).forEach(ItemEntity ->{
-            itemtList.add(objectMapper.convertValue(ItemEntity,Item.class));
-        });
-
-        return itemtList;
-    }*/
 
 
 }
