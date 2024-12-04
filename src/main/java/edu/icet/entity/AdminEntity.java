@@ -17,6 +17,7 @@ public class AdminEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer adminId;
     private String name;
+    private String email;
     private String password;
 
 }

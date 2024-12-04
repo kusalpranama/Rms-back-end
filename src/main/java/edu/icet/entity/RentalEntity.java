@@ -6,19 +6,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "customer")
-public class CustomerEntity {
+@Table(name = "rental")
+public class RentalEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer customerId;
-    private String name;
-    private String city;
-    private String contact;
-    private String email;
-    private String password;
+    private Integer rentalId;
+    private LocalDate rentalDate;
+    private LocalDate returnDate;
+    private LocalDate dueDate;
+    private double totalCost;
 }

@@ -9,13 +9,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Item {
+public class LoginRequest {
 
-    private Integer itemId;
-    private String itemName;
-    private String description;
-    private double rentalCost;
-    private int inventory;
-
-
+    private String email;
+    private String password;
 }
